@@ -1,0 +1,42 @@
+@if (movieService.movie(); as movieData) {
+
+    @if (movieData.Response === "True") {
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="movie-details-card shadow-lg p-4">
+                <div class="row g-4 align-items-center">
+                <div class="col-md-4 text-center">
+                <img 
+                    [src]="movieData.Poster"
+                    [alt]="movieData.Title + ' poster'"
+                    class="img-fluid movie-poster">
+                </div>
+                <div class="col-md-8">
+                <h1 class="movie-title mb-3">
+                    {{ movieData.Title }}
+                </h1>
+                <p class="movie-info">
+                    <strong>Year:</strong> {{ movieData.Year }}
+                </p>
+                <p class="movie-info">
+                    <strong>Director:</strong> {{ movieData.Director }}
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    } @else {
+    <div class="container mt-5 text-center">
+        <div class="alert alert-danger shadow-sm">
+        <h4 class="mb-0">
+            {{ movieData.Error }}
+        </h4>
+        </div>
+    </div>
+
+    }
+
+}

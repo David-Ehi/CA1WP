@@ -1,0 +1,18 @@
+.cardbutton {
+    background-color: rgb(255, 0, 0);
+    border-color: red;
+}
+
+.cardbutton:hover {
+    background-color: rgb(161, 0, 0);
+    border-color: rgb(161, 0, 0);
+}
+
+.maincontainer {
+    background-color: rgb(31, 31, 31);
+}
+
+.pagenum {
+    color: white;
+    font-weight: 200;
+}
